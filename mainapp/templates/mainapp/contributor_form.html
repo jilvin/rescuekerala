@@ -1,17 +1,33 @@
 {% extends 'base.html' %}
-{% load bootstrap3 %}
-
-{% block content %}
-
-
-  <form method="post">
+ {% load bootstrap3 %}
+ {% block content %}
+   <form method="post">
     <b class="text-center"> You can also contribute to Chief Minister's Fund:<br>
-      മുഖ്യമന്തിയുടെ ദുരിതാശ്വാസ നിധിയിലേക്ക് സംഭാവന ചെയ്യാം<br/>
-      Account number : 67319948232<br>
-      Bank: SBI<br>
-      Branch: City Branch, TVM<br>
-      IFS Code: SBIN0070028<br>
-      <a href="https://donation.cmdrf.kerala.gov.in/">Donate to Chief Minister's Fund Online</a>
+      മുഖ്യമന്തിയുടെ ദുരിതാശ്വാസ നിധിയിലേക്ക് സംഭാവന ചെയ്യാം<br/><br>
+      <table class="table">
+        <tr>
+          <td>Account number</td> <td>67319948232</td>
+        </tr>
+        <tr>
+          <td>Name on Account</td> <td>Chief Ministers Distress Relief Fund</td>
+        </tr>
+        <tr>
+          <td>Account Type</td> <td>Savings</td>
+        </tr>
+        <tr>
+          <td>Bank</td> <td>SBI</td>
+        </tr>
+        <tr>
+          <td>Branch</td> <td>City Branch, TVM</td>
+        </tr>
+        <tr>
+          <td>IFS Code</td> <td>SBIN0070028</td>
+        </tr>
+        <tr>
+          <td>SWIFT Code</td> <td>SBININBBT08</td>
+        </tr>
+      </table>
+      <a href="https://donation.cmdrf.kerala.gov.in/" target="_blank">Donate to Chief Minister's Fund Online</a>
     </b><br><br>
   {% csrf_token %}
   {% bootstrap_form form %}
@@ -21,9 +37,161 @@
   </button>
   {% endbuttons %}
   </form>
-<script>
+ <h4>More Donation Options:</h4>
+   <table>
+    <thead>
+      <th style="width: 10%;"></th>
+      <th style="width: 30%;">PAYMENT GATEWAY SERVICES</th>
+      <th style="width: 30%;">ACCOUNT DETAILS</th>
+      <th style="width: 30%;">UPI QR CODE</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <img class="payment-logo" src="https://donation.cmdrf.kerala.gov.in//assets/images/gateway-southindianbank.jpg"/>
+          <br/>
+          <b>SOUTH INDIAN BANK</b>
+        </td>
+        <td>
+            Internet Banking - 50 banks supported<br/>
+            Domestic Credit and Debit Cards supported<br/><br/>
+
+            payment charges: Nil
+        </td>
+        <td>
+            A/c Number : 0721053000002584<br/>
+            A/c Name: Chief Minister’s Distress Relief Fund<br/>
+            Branch : Corporate Branch, Thiruvananthapuram<br/>
+            IFSC : SIBL0000721
+        </td>
+        <td>
+            <img class="qr-code" src="https://donation.cmdrf.kerala.gov.in//assets/images/upi-southindianbank.png"/>
+            <br/><br/>
+            keralacmdrf@sib
+        </td>
+      </tr>
+       <tr style="background-color: #ff5252">
+          <td>
+            <img class="payment-logo" src="https://donation.cmdrf.kerala.gov.in//assets/images/gateway-federalbank.jpg"/>
+            <br/>
+            <b>FEDERAL BANK</b>
+          </td>
+          <td>
+              <strong>TEMPORARILY OUT OF ORDER DUE TO FLOODS</strong><br /><br />
+              Internet Banking - 53 banks supported<br/>
+              Domestic Credit and Debit Cards supported<br/>
+              UPI payment supported<br/><br/>
+               payment charges: Nil
+          </td>
+          <td>
+              A/c Number : 10210100412397<br/>
+              A/c Name: Chief Minister’s Distress Relief Fund<br/>
+              Branch: Palayam, Thiruvananthapuram<br/>
+              IFSC : FDRL0001021
+          </td>
+          <td>
+              <img class="qr-code" src="https://donation.cmdrf.kerala.gov.in//assets/images/upi-federalbank.png"/>
+              <br/><br/>
+              cmdrf@fbl
+          </td>
+        </tr>
+         <tr>
+            <td>
+              <img class="payment-logo" src="https://donation.cmdrf.kerala.gov.in//assets/images/gateway-airtel.jpg"/>
+              <br/>
+              <b>AIRTEL PAYMENTS BANK</b>
+            </td>
+            <td>
+                Airtel Payments bank<br/>
+                Airtel Wallet<br/><br/>
+                 payment charges: Nil<br/>
+            </td>
+            <td>
+            </td>
+            <td>
+                <img class="qr-code" src="https://donation.cmdrf.kerala.gov.in//assets/images/upi-airtel.png"/>
+                <br/><br/>
+                1000010033@mairtel
+            </td>
+          </tr>
+           <tr>
+              <td>
+                <img class="payment-logo" src="https://donation.cmdrf.kerala.gov.in//assets/images/gateway-sbi.jpg"/>
+                <br/>
+                <b>STATE BANK OF INDIA</b>
+              </td>
+              <td>
+                  Internet Banking - 40 banks supported<br/>
+                  Domestic Credit and Debit Cards supported<br/><br/>
+
+                  payment charges: Nil
+              </td>
+              <td>
+                  A/c Number : 67319948232<br/>
+                  A/c Name: Chief Minister’s Distress Relief Fund<br/>
+                  Branch: City Branch, Thiruvananthapuram<br/>
+                  IFSC : SBIN0070028
+              </td>
+              <td>
+                  <img class="qr-code" src="https://donation.cmdrf.kerala.gov.in//assets/images/upi-sbi.png"/>
+                  <br/><br/>
+                  keralacmdrf@sbi
+              </td>
+            </tr>
+
+            <tr>
+                <td>
+                  <img class="payment-logo" src="https://donation.cmdrf.kerala.gov.in//assets/images/gateway-paytm.jpg"/>
+                  <br/>
+                  <b>PAYTM</b>
+                </td>
+                <td>
+                    <b>SMART URL SERVICE</b><br/>
+                    <a href="http://m.p-y.tm/Kerala-CMDRF" target="_blank">m.p-y.tm/Kerala-CMDRF</a><br/><br/>
+                     payment charges: Nil
+                </td>
+                <td>
+                </td>
+                <td>
+                    <img class="qr-code" src="https://donation.cmdrf.kerala.gov.in//assets/images/upi-paytm.png"/>
+                    <br/><br/>
+                    PAYTM app only
+                </td>
+              </tr>
+
+              <tr>
+                 <td>
+                   <img class="payment-logo" src="https://donation.cmdrf.kerala.gov.in//assets/images/gateway-hdfc.jpg"/>
+                   <br/>
+                   <b>HDFC BANK</b>
+                 </td>
+                 <td>
+                     Internet Banking - 53 banks supported<br/>
+                     Domestic Credit and Debit Cards supported<br/>
+                     <strong>INTERNATIONAL</strong> Credit and Debit Cards supported<br/><br/>
+
+                     payment charges: Nil
+                 </td>
+                 <td>
+                     A/c Number : 50100248534439<br/>
+                     A/c Name: Chief Minister’s Distress Relief Fund<br/>
+                     Branch: Vattiyoorkavu, Trivandrum<br/>
+                     IFSC : HDFC0002485<br />
+                     SWIFT CODE: HDFCINBBXXX
+                 </td>
+                 <td>
+                     No QR Code
+                 </td>
+               </tr>
+    </tbody>
+  </table>
+  <br />
+  <h4>Donations in Kind</h4><br /><br />
+      <img style="max-width:100%" src="https://images-eu.ssl-images-amazon.com/images/G/31/traffic/PC_editorial._CB1198675309_.jpg" alt="Amazon_Cover"/> <br /><br />
+      Amazon has partnered with various NGOs to provide relief materials directly to those affected by the flood. Further information including how you can contribute is made available here: <a href="https://www.amazon.in/b?ie=UTF8&node=8891257031&pf_rd_p=2c1c1ac8-3c7f-4880-b5a7-e870ec58eefa&pf_rd_r=TEX7HJ9QSHSJQE3EX59W" target="_blank">Kerala Needs Your Help</a><br /><br />
+ <script>
     window.onload = function() {
         $("#id_phone").attr('type', 'number');
-    }
-</script>
-{% endblock %}
+     }
+ </script>
+ {% endblock %}

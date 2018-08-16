@@ -185,3 +185,10 @@ tr:hover td{
 table thead tr th {
   border-top: 2px solid #ddd !important;
 }
+
+.qr-code {
+    width: 100%
+}
+ .payment-logo {
+    width: 250px;
+}
