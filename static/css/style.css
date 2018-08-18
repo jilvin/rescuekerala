@@ -186,6 +186,12 @@ table thead tr th {
   border-top: 2px solid #ddd !important;
 }
 
+.container{
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+
 .qr-code {
     width: 100%
 }
