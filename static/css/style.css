@@ -192,3 +192,9 @@ table thead tr th {
     width: 100%;
 }
 
+.qr-code {
+    width: 50%;
+}
+ .payment-logo {
+    width: 100%;
+}
