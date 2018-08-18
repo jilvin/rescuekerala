@@ -191,3 +191,10 @@ table thead tr th {
     margin-right: 0;
     width: 100%;
 }
+
+.qr-code {
+    width: 50%;
+}
+ .payment-logo {
+    width: 100%;
+}
